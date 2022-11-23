@@ -1,0 +1,24 @@
+version: '3.5'
+services:
+  controller:
+    container_name: nGrinder-Controller
+    image: ngrinder/controller
+    restart: always
+    ports: 
+      - "7070:80"   # Default controller web UI port.
+      - "16001:16001" 
+      - "12000-12009:12000-12009" # controllers allocate stress tests through these ports.
+    volumes:
+      - ./ngrinder-controller-date:/opt/ngrinder-controller
+  agent1:
+    container_name: nGrinder-agent1
+    image: ngrinder/agent
+    restart: always
+    links:
+      - controller
+  agent2:
+    container_name: nGrinder-agent2
+    image: ngrinder/agent
+    restart: always
+    links:
+      - controller
