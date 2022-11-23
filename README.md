@@ -13,4 +13,4 @@
 
 docs 페이지를 참고해주세요.
 
-[https://swm-fire.github.io/main-page-stress-test/](https://swm-fire.github.io/main-page-stress-test/)
+[https://swm-fire.github.io/stress-test-result/](https://swm-fire.github.io/stress-test-result/)
